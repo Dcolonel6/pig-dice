@@ -59,3 +59,8 @@ User.prototype.updateTotalScore = function(){
     this.cumulativeScore = 0;
     return this.totalScore;
 };
+User.prototype.haveIWon = function(){ 
+    if(this.totalScore >= 100){
+        this.dispatchEventWinner();
+    }
+};
