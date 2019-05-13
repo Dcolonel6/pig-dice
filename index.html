@@ -38,7 +38,44 @@
                 </div>
             </form>
         </div>
-        
+        <div class="playground row hide" id="playground" >
+            <div class="col-md-6">
+                <div class="player-0-panel text-center">
+                    <div class="text-center mb-3">
+                        <div class="display-3" id="current-name">Player 1</div>
+                        <div class="player-score mb-3" id="score-0">0</div>
+                        <img id ="dice" class="img-fluid mb-3" src="images/dice-1.png" alt="dice-4">   
+                        <div class="player-current-box">
+                            <div class="player-current-label">Current: <span class="player-current" id="current-score">0</span></div>
+                            <div class="player-current-label">Rolled: <span class="player-current" id="dice-rolled">0</span></div>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-success" id="btnRollDice">Roll</button>
+                    <button class="btn btn-outline-warning" id="btnHold">Hold</button>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="scores-wrapper">
+                    <h1 class="display-3">Players Scores</h1>
+                    <div class="scores-box">
+                        <h3 class="display-4 player1-name text-danger">
+                           player1: 
+                        </h3>
+                        <span class="score-player1 text-danger" >0</span>
+                        <h3 class="display-4 player2-name text-muted">
+                        Player2:  
+                        </h3>
+                        <span class=" text-success score-player2 text-muted" >0</span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/user.js"></script>
+    <script src="js/game.js"></script>
 </body>
 
 </html>
