@@ -25,6 +25,16 @@
 
     });
 
+    let rolledOneEventHandler = (event) => {
+        //update player score   
+        console.log("updating scores of the game");
+        playerScore.name =  event.detail.name;
+        playerScore.score = userCurrentlyRolling.totalScore;     
+        switchUser(event);
+        alert(`Oops ${event.detail.name},you have rolled one`);
+       
+        //To do: check if user has over 100pts
+    };
 
 
 })($);
