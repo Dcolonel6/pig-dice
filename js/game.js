@@ -73,6 +73,23 @@
         $(".scores-box>.score-player2").toggleClass("text-danger");
 
     };
+    function setUp(player1,player2){
+
+        userCurrentlyRolling = player1;
+        userCurrentlyRolling.isMyTurn = true;
+        hasGameEnded = false;
+        //console.log(players);
+        $("#current-name").text(userCurrentlyRolling.name);
+        $("#score-0").text(userCurrentlyRolling.totalScore);
+        $("#form-signup").toggleClass("clicked");
+        $(".playground").removeClass("hide");
+        
+        $(".score-player1").text(player1.totalScore);
+        $(".score-player2").text(player2.totalScore);
+        $(".player2-name").text(player2.name);
+        $(".player1-name").text(player1.name);
+
+    };
 
 
 })($);
