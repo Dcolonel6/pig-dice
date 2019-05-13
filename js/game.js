@@ -96,5 +96,23 @@
         player.isMyTurn = false;
     }
 
+    document.addEventListener("rolledOne",rolledOneEventHandler);
+    document.addEventListener("won",function(evnt){
+        userCurrentlyRolling.isMyTurn = false;
+        hasGameEnded = true;
+        userCurrentlyRolling = null;
+        
+        let decision = confirm(`${evnt.detail.name} has won the game.\n want a rematch?`);
+        if(decision){
+            players.forEach(resetScores);
+            setUp();
+        }
+        else{
+            document.location.reload(true);
+        }
+    });
+    $("#btnHold").on("click",holdEventHandler);
+    // $(btnHold2).addEventListener("click",holdEventHandler);
+
 
 })($);
