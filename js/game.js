@@ -90,6 +90,11 @@
         $(".player1-name").text(player1.name);
 
     };
+    var resetScores = function (player){
+        player.cumulativeScore = 0;
+        player.totalScore = 0;
+        player.isMyTurn = false;
+    }
 
 
 })($);
