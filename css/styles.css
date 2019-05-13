@@ -11,3 +11,81 @@ html,body{
     transform: translateY(-100%);
 
 }
+
+.player-name {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.player-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: #EB4D4D;
+    
+}
+
+.active { background-color: #f7f7f7; }
+.active .player-name { font-weight: 300; }
+
+.active .player-name::after {
+    content: "\2022";
+    font-size: 47px;
+    position: absolute;
+    color: #EB4D4D;
+    top: -7px;
+    right: 10px;
+    
+}
+
+.player-current-box {
+    background-color: #EB4D4D;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+    min-width: 120px;
+}
+
+.player-current-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #222;
+}
+
+.player-current-score {
+    font-size: 30px;
+}
+.score-wrapper{
+    background-color: #f7f7f7;
+    width: 100%
+}
+.score-player1,.score-player2{
+    display: block;
+}
+.display-3::after{
+    content: "";
+    margin: 10px auto 45px;
+    height: 2px;
+    width: 15%;
+    color: teal;
+    display: block;
+}
+.hide{
+    display: none;
+}
+
+.show{
+    transform: translateY(140%);
+}
+#playground{
+    margin-top: -20px;
+}
