@@ -31,3 +31,12 @@ User.prototype.hasHold = function(){
         }
     }
 };
+User.prototype.rollDice = function(){
+    let diceScore;    
+    if(this.isMyTurn){
+        diceScore = Math.floor(Math.random()*6) + 1;
+        this.checkRolledOne(diceScore);
+        return diceScore;                        
+    }
+    return 0;
+};
