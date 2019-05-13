@@ -42,6 +42,37 @@
         playerScore.score >= 100 ? userCurrentlyRolling.haveIWon() : switchUser(event);
         
     };
+    let switchUser = (event) => {
+        
+
+        //change user currently rolling
+        userCurrentlyRolling.isMyTurn = !userCurrentlyRolling.isMyTurn;
+        console.log("turned off user's turn");
+        console.log(userCurrentlyRolling);
+        userCurrentlyRolling = event.detail.id === players[0].id ? players[1] : players[0];
+        console.log(`changed user from player${event.detail.id} to player${userCurrentlyRolling.id}`);
+        userCurrentlyRolling.isMyTurn = !userCurrentlyRolling.isMyTurn;
+        console.log("current player");
+        console.log(userCurrentlyRolling);
+        $("#dice").attr("src",`images/dice-1.png`);
+        $("#current-name").text(userCurrentlyRolling.name);
+        $("#score-0").text(userCurrentlyRolling.totalScore);
+        
+        $(".score-player1").text(players[0].totalScore);
+        $(".score-player2").text(players[1].totalScore);
+        $("#dice-rolled").text(0);
+        $("#current-score").text(userCurrentlyRolling.cumulativeScore);
+        $(".scores-box>.player1-name").toggleClass("text-muted");
+        $(".scores-box>.score-player1").toggleClass("text-muted");
+        $(".scores-box>.player1-name").toggleClass("text-danger");
+        $(".scores-box>.score-player1").toggleClass("text-danger");
+
+        $(".scores-box>.player2-name").toggleClass("text-muted");
+        $(".scores-box>.score-player2").toggleClass("text-muted");
+        $(".scores-box>.player2-name").toggleClass("text-danger");
+        $(".scores-box>.score-player2").toggleClass("text-danger");
+
+    };
 
 
 })($);
