@@ -40,3 +40,13 @@ User.prototype.rollDice = function(){
     }
     return 0;
 };
+User.prototype.checkRolledOne = function(rollScore){
+    if(rollScore > 1){
+        this.updateCumulativeScore(rollScore);
+        
+    }
+    else{
+        this.cumulativeScore = 0;
+        this.dispatchEventRolledOne();
+    }
+};
