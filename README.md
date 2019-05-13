@@ -49,7 +49,7 @@ You need a web browser installed on your machine to run this program.
 3. Open the index.html on your favorite browse
 
 ## Live Site
-Alternatively you can visit a live link [here]()
+Alternatively you can visit a live link [here](https://dcolonel6.github.io/pig-dice/)
 
 
 ## Built With
@@ -63,4 +63,4 @@ For any enquires kindly send an email at [d.n_mwangi@outlook.com](https://outloo
 
 ## License
 
-This project is licensed under the MIT License - for more information kindly visit [LICENSE]() 
+This project is licensed under the MIT License - for more information kindly visit [LICENSE](https://github.com/Dcolonel6/pig-dice/blob/master/LICENSE) 
