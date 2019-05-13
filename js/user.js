@@ -22,3 +22,12 @@ function User(name,id){
 User.prototype.updateCumulativeScore = function(rollScore){
     this.cumulativeScore += rollScore;
 };
+User.prototype.hasHold = function(){
+    this.updateTotalScore();
+    return {
+        detail: {
+            id: this.id,
+            name: this.name
+        }
+    }
+};
