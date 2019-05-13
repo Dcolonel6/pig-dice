@@ -64,3 +64,6 @@ User.prototype.haveIWon = function(){
         this.dispatchEventWinner();
     }
 };
+User.prototype.dispatchEventWinner = function(){
+    document.dispatchEvent(this.winEvent)
+};
