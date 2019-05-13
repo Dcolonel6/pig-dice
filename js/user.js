@@ -54,3 +54,8 @@ User.prototype.dispatchEventRolledOne = function(){
     document.dispatchEvent(this.rolledOneEvent);
     
 };
+User.prototype.updateTotalScore = function(){
+    this.totalScore += this.cumulativeScore;
+    this.cumulativeScore = 0;
+    return this.totalScore;
+};
