@@ -19,3 +19,6 @@ function User(name,id){
             id: id
         }});
 }
+User.prototype.updateCumulativeScore = function(rollScore){
+    this.cumulativeScore += rollScore;
+};
