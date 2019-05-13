@@ -50,3 +50,7 @@ User.prototype.checkRolledOne = function(rollScore){
         this.dispatchEventRolledOne();
     }
 };
+User.prototype.dispatchEventRolledOne = function(){
+    document.dispatchEvent(this.rolledOneEvent);
+    
+};
