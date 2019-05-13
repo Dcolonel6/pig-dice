@@ -35,6 +35,13 @@
        
         //To do: check if user has over 100pts
     };
+    let holdEventHandler = (evnt) => {
+        let event = userCurrentlyRolling.hasHold();
+        playerScore.name =  event.detail.name; 
+        playerScore.score = userCurrentlyRolling.totalScore; 
+        playerScore.score >= 100 ? userCurrentlyRolling.haveIWon() : switchUser(event);
+        
+    };
 
 
 })($);
